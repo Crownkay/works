@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS FORM</title>
+    <link rel="stylesheet" href="../css/formcss.css">
+</head>
+<body>
+    
+<form method="POST">
+<div class="body">
+ Firstname:<br>
+ <input type="text" id="fname" name="firstname"><br>
+ Lastname:<br>
+ <input type="text" id="lname" name="lastname"><br>
+ Password:<br>
+ <input type="password" id="passw" required><br>
+ <p id="demo"></p>
+ State in Nigeria:<br>
+<select>
+     <option value="Lagos">Lagos</option>
+     <option value="kano">Kano</option>
+     <option value="oyo">Oyo</option>
+     <option value="delta">Delta</option>
+
+</select>
+<input type="text" name="search" placeholder="Search...">
+<textarea placeholder="Comment:"></textarea>
+ <input type="submit" id="submit" onclick="makePassword()">
+</div>
+</form>
+
+<p id="bordering">Hello World... It's Adekola </p>
+
+<script>
+
+    function makePassword(){
+        var password, acceptance;
+        password =
+        document.getElementById("passw").value;
+        acceptance = (password < length[7]) ? "too short":"good";
+        document.getElementById("demo").innerHTML = acceptance + "passcode.";
+    }
+
+</script>
+
+</body>
+</html>
